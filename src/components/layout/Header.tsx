@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Logo from '@/components/ui/Logo'
 
 const navLinks = [
   { label: 'Leistungen', href: '#leistungen' },
@@ -39,18 +40,12 @@ export default function Header() {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 group"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
-            <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] flex items-center justify-center text-white font-bold text-sm group-hover:bg-[#7C3AED] transition-colors">
-              A
-            </div>
-            <span className="font-semibold text-white hidden sm:block">
-              Ahmad Aljumaily
-            </span>
+            <Logo size="sm" />
           </a>
 
           {/* Desktop Nav */}

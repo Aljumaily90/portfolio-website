@@ -11,9 +11,9 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'Ahmad Aljumaily — KI-Automatisierungen & Webentwicklung',
+  title: 'MasNest — KI-Automatisierungen & Webentwicklung',
   description:
-    'Ich automatisiere Geschäftsprozesse mit KI und entwickle moderne Websites. Jetzt Kontakt aufnehmen.',
+    'MasNest automatisiert Geschäftsprozesse mit KI und entwickelt moderne Websites. Jetzt Kontakt aufnehmen.',
   keywords: [
     'KI-Automatisierung',
     'n8n',
@@ -21,22 +21,23 @@ export const metadata: Metadata = {
     'Next.js',
     'Webentwicklung',
     'PWA',
+    'MasNest',
     'Ahmad Aljumaily',
     'Schweiz',
   ],
   authors: [{ name: 'Ahmad Aljumaily' }],
   openGraph: {
-    title: 'Ahmad Aljumaily — KI-Automatisierungen & Webentwicklung',
+    title: 'MasNest — KI-Automatisierungen & Webentwicklung',
     description:
-      'Ich automatisiere Geschäftsprozesse mit KI und entwickle moderne Websites. Jetzt Kontakt aufnehmen.',
+      'MasNest automatisiert Geschäftsprozesse mit KI und entwickelt moderne Websites. Jetzt Kontakt aufnehmen.',
     type: 'website',
     locale: 'de_CH',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ahmad Aljumaily — KI-Automatisierungen & Webentwicklung',
+    title: 'MasNest — KI-Automatisierungen & Webentwicklung',
     description:
-      'Ich automatisiere Geschäftsprozesse mit KI und entwickle moderne Websites.',
+      'MasNest automatisiert Geschäftsprozesse mit KI und entwickelt moderne Websites.',
   },
 }
 

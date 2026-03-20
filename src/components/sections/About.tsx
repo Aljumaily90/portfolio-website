@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Bot, Globe, Workflow, Code2 } from 'lucide-react'
+import Image from 'next/image'
 
 const skills = [
   { icon: Bot, label: 'KI-Automatisierung' },
@@ -32,11 +33,15 @@ export default function About() {
             <div className="relative">
               {/* Gradient border */}
               <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl p-0.5 bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6]">
-                <div className="w-full h-full rounded-2xl bg-[#111118] flex flex-col items-center justify-center gap-4 text-slate-500">
-                  <div className="w-20 h-20 rounded-full bg-[#1E1E2E] flex items-center justify-center">
-                    <span className="text-3xl font-bold text-[#8B5CF6]">A</span>
-                  </div>
-                  <p className="text-sm text-slate-600">Profilbild folgt</p>
+                <div className="w-full h-full rounded-2xl overflow-hidden">
+                  <Image
+                    src="/ahmad.png"
+                    alt="Ahmad Aljumaily"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
               </div>
 

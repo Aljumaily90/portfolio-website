@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react'
+import Logo from '@/components/ui/Logo'
 
 const navLinks = [
   { label: 'Leistungen', href: '#leistungen' },
@@ -16,11 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] flex items-center justify-center text-white font-bold text-sm">
-                A
-              </div>
-              <span className="font-semibold text-white">Ahmad Aljumaily</span>
+            <div className="mb-3">
+              <Logo size="sm" />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               KI-Automatisierungen & moderne Webentwicklung für Unternehmen, die wachsen wollen.
@@ -78,7 +76,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-[#1E1E2E] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
-          <p>© {currentYear} Ahmad Aljumaily. Alle Rechte vorbehalten.</p>
+          <p>© {currentYear} MasNest. Alle Rechte vorbehalten.</p>
           <div className="flex gap-4">
             <a href="/impressum" className="hover:text-slate-300 transition-colors">
               Impressum
