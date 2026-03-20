@@ -18,15 +18,24 @@ export async function POST(request: NextRequest) {
     }
 
     const formspreeUrl = process.env.FORMSPREE_URL || 'https://formspree.io/f/xzdjwedj'
+    const n8nWebhookUrl = process.env.N8N_WEBHOOK_URL
 
-    const res = await fetch(formspreeUrl, {
+    // Formspree (primary) + n8n (parallel, non-blocking)
+    const formspreePromise = fetch(formspreeUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
     })
+
+    const n8nPromise = n8nWebhookUrl
+      ? fetch(n8nWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, nachricht: message, unternehmen: subject }),
+        }).catch((err) => console.error('n8n webhook error:', err))
+      : Promise.resolve()
+
+    const [res] = await Promise.all([formspreePromise, n8nPromise])
 
     if (!res.ok) {
       const data = await res.json()
